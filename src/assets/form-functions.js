@@ -1,3 +1,19 @@
+// NavBar Dropdown when on hover instead of click
+document.addEventListener('DOMContentLoaded', function () {
+    if (window.innerWidth > 992) {  // inly for large screens 
+        document.querySelectorAll('.navbar .dropdown').forEach(function (dropdown) {
+            dropdown.addEventListener('mouseenter', function () { // dropdown on hover
+                let dropdownMenu = this.querySelector('.dropdown-menu');
+                dropdownMenu.classList.add('show');
+            });
+            dropdown.addEventListener('mouseleave', function () { // reset to slide up
+                let dropdownMenu = this.querySelector('.dropdown-menu');
+                dropdownMenu.classList.remove('show');
+            });
+        });
+    }
+});
+
 // error style
 function errorStyle(input, spanId, message) {
     input.style.borderColor = "red";    

@@ -75,6 +75,27 @@ body {
     background-color: var(--NavBarButtonHover);
     color: aliceblue;
 }
+/* ############################# */
+/* Banner */
+.personal-banner {
+    background-image: url('/assets/images/banner-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 130px 0;
+}
+.personal-banner h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+}
+.personal-banner-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.personal-banner-links ul li a:hover {
+    color: var(--TextOrange);
+}
 /* ###################################### */
 /* Error Style */
 .error-message {
