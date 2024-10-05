@@ -1,0 +1,23 @@
+<section class="banner section-space-y mb-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="section-space-md-y text-center">
+                    <h1 class="h2 " id="h1-Contact">Terms & Conditions</h1>
+                    <ul class="list list-row  justify-content-center">
+                        <li><a [routerLink]="['']" class="link  link-home " id="link-home">Home <span class="ms-2">/</span></a></li>
+                        <li><a [routerLink]="['terms-and-conditions']" class="link text-lg-start  " id="link-contact">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@for(term of terms; track $index) {
+    <section class="personal-px-5rem py-3">
+        <h2 class="personal-TnC-title mb-3">{{ term.title }}</h2>
+        <p class="personal-TnC-body mb-2">{{ term.para1 }}</p>
+        <p class="personal-TnC-body mb-2">{{ term.para2 }}</p>
+        <p class="personal-TnC-body">{{ term.para3 }}</p>
+    </section>
+}

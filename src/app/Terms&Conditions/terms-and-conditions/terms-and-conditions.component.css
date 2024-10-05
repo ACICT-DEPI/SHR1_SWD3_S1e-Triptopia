@@ -1,0 +1,45 @@
+/* Banner */
+.banner {
+    background-image: url('/assets/images/banner-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.section-space-y {
+    padding-block-start: clamp(3.75rem, 6.5vw + 1rem, 7.5rem);
+    padding-block-end: clamp(3.75rem, 6.5vw + 1rem, 7.5rem);
+}
+.h2{
+    color: var(--BodyBgColor);
+    font-size: 60px;
+}
+.list{
+    display: flex;
+    list-style-type: none;
+
+}
+.link{
+    text-decoration: none;
+    margin: 5px;
+}
+#link-contact{
+    color: var(--TextOrange);
+
+}
+.link-home{
+    color: var(--BodyBgColor);
+    text-decoration: none;
+}
+.link-home:hover{
+    color: var(--TextOrange);
+
+}
+/* ##################### */
+/* Terms & Conditions */
+.personal-TnC-title {
+    color: var(--FooterHeaders);
+    font-size: 1.5rem;
+}
+.personal-TnC-body {
+    color: #333;
+}
