@@ -1,0 +1,134 @@
+<!-- ############################################### -->
+<!-- Banner -->
+<section class="personal-banner mb-5">
+    <h1>Checkout</h1>
+    <div class="personal-banner-links">
+        <ul class="d-flex list-unstyled justify-content-center">
+            <li class="me-3">
+                <a [routerLink]="['']">Home <span class="ms-2">/</span></a>
+            </li>
+            <li>
+                <a [routerLink]="['checkout']" class="active">Checkout</a>
+            </li>
+        </ul>
+    </div> 
+  </section>
+  <!-- ############################################### -->
+<div class="container personal-checkout-sec1">
+    <div class="row">
+        <div class="col-md-8"> <!-- Left Column (Form) -->
+            <h2 class="mb-4">Confirm and Pay</h2>
+            <hr>
+            <div class="form-section"> <!-- Shipping Information Form -->
+                <h5>
+                    <span class="badge bg-warning me-2">1</span>
+                    Shipping Information
+                </h5>
+                <form id="paymentForm" action="/checkout-conf" name="RegForm">
+                    <p class="personal-checkout-para">Billing Address</p>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input placeholder="First Name" type="text" class="form-control" id="billingFirstName" name="firstname" />
+                            <div class="invalid-feedback">Please enter a valid first name</div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input placeholder="Last Name" type="text" class="form-control" id="billingLastName" name="lastname" />
+                            <div class="invalid-feedback">Please enter a valid last name</div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input placeholder="Full Address" type="text" class="form-control" id="billingAddress" name="address" />
+                        <div class="invalid-feedback">Please enter a valid full address</div>
+                    </div>
+                    <div class="mb-3">
+                        <input placeholder="Full Address 2 (optional)" type="text" class="form-control" id="billingAddress2" name="address2" />
+                    </div>
+                    <p class="personal-checkout-para">Shipping Address</p>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input placeholder="First Name" type="text" class="form-control" id="shippingFirstName" />
+                            <div class="invalid-feedback">Please enter a valid first name</div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input placeholder="Last Name" type="text" class="form-control" id="shippingLastName" />
+                            <div class="invalid-feedback">Please enter a valid Last Name</div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input placeholder="Full Address" type="text" class="form-control" id="shippingAddress" />
+                        <div class="invalid-feedback">Please enter a valid Full Address</div>
+                    </div>
+                    <div class="mb-3">
+                        <input placeholder="Full Address 2 (optional)" type="text" class="form-control" id="shippingAddress2" />
+                    </div>
+                    <hr>
+
+                    <!-- Payment Methods Section -->
+                    <h5><span class="badge bg-warning me-2 mb-3">2</span>Payment Methods</h5>
+                    <div class="payment-methods">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="payWithPayPal" />
+                            <label class="form-check-label" for="payWithPayPal">
+                                Pay with PayPal
+                            </label>
+                            <p class="text-muted ms-4">You will be redirected to PayPal website to complete your purchase securely.</p>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="creditDebitCard" checked />
+                            <label class="form-check-label" for="creditDebitCard">
+                                Credit / Debit Card
+                            </label>
+                            <p class="text-muted ms-4">We support Mastercard, Visa, Discover, and Stripe.</p>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cardNumber" class="form-label">Card Number</label>
+                            <input type="text" class="form-control" id="cardNumber" placeholder="XXXX XXXX XXXX XXXX" />
+                            <div class="invalid-feedback">Please enter a valid Card Number</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cardHolder" class="form-label">Card Holder</label>
+                            <input type="text" class="form-control" id="cardHolder" placeholder="Peter Parker" />
+                            <div class="invalid-feedback">Please enter a valid Card Holder Name</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="expirationDate" class="form-label">Expiration Date</label>
+                                <input type="text" class="form-control" id="expirationDate" placeholder="MM/YY" />
+                                <div class="invalid-feedback">Please enter a valid date</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="cvc" class="form-label">CVC</label>
+                                <input type="password" class="form-control" id="cvc" placeholder="****" />
+                                <div class="invalid-feedback">Please enter a valid CVC</div>
+                            </div>
+                        </div>
+                        <button class="btn personal-checkout-btn w-100 mt-3" [routerLink]="['checkout-conf']" id="completeBookingBtn">Complete Booking</button>
+                    </div> <!-- End of payment-methods -->
+                </form> <!-- Moved closing form tag outside of payment-methods -->
+            </div> <!-- End of form-section -->
+        </div> <!-- End of col-md-8 -->
+
+        <!-- Right Column (Order Summary) -->
+        <div class="col-md-4">
+            <div class="order-summary">
+                <h5><span class="badge bg-warning me-2">3</span>Order Summary</h5>
+                <p><strong>Warsaw Day Tour</strong></p>
+                <p>⭐ 5.0 (234 reviews)</p>
+                <hr>
+                <div class="d-flex justify-content-between">
+                    <p>Service charge</p>
+                    <p>$20.00</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <p>Discount</p>
+                    <p>Free</p>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between">
+                    <p><strong>Total</strong></p>
+                    <p><strong>$20.00</strong></p>
+                </div>
+            </div>
+        </div> <!-- End of col-md-4 -->
+    </div> <!-- End of row -->
+</div> <!-- End of container -->

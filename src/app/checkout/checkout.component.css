@@ -1,0 +1,88 @@
+/* Banner */
+.personal-banner {
+    background-image: url('/assets/images/banner-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 130px 0;
+}
+.personal-banner h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+}
+.personal-banner-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.personal-banner-links ul li a:hover {
+    color: var(--TextOrange);
+}
+/* ######################################## */
+.form-section {
+    margin-bottom: 30px;
+}
+.form-control{
+    background-color:#F6F6F6 ;
+    border: none;
+    border-radius: 5px;
+}
+.order-summary {
+    border: 1px solid #ddd;
+    border-top: none;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.personal-checkout-para{
+    font-size: 12px;
+}
+.payment-methods {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+}
+.payment-methods h5 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.personal-checkout-sec1{
+    padding: 80px 20px;
+}
+.personal-checkout-btn {
+    background-color: #ff6a00;
+    color: white;
+}
+.personal-checkout-btn:hover{
+    opacity: 0.8;
+    color: white;
+}
+.personal-checkout-radio{
+    border: 2px solid;
+}  
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .order-summary {
+        margin-top: 20px;
+    }
+}  
+@media (max-width: 576px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+    h5 {
+        font-size: 1.1rem;
+    }
+    .personal-checkout-btn {
+        font-size: 0.9rem;
+    }
+    .form-section {
+        padding: 10px;
+    }
+    .order-summary {
+        padding: 15px;
+    }
+    .container {
+        padding: 10px;
+    }
+}
