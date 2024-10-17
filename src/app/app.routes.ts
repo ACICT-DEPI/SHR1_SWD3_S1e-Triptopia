@@ -6,7 +6,6 @@ import { TermsAndConditionsComponent } from './Terms&Conditions/terms-and-condit
 import { FaqComponent } from './FAQ-Folder/faq/faq.component';
 import { DestinationComponent } from './destination/destination.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-import { CheckoutComponent } from './checkout/checkout.component';
 import { CheckoutConfirmComponent } from './checkout-confirm/checkout-confirm.component';
 
 export const routes: Routes = [
@@ -17,6 +16,5 @@ export const routes: Routes = [
     {path: 'terms-and-conditions', component: TermsAndConditionsComponent},
     {path: 'about-us', component: AboutUsComponent},
     {path: 'FAQ', component: FaqComponent},
-    {path: 'checkout', component: CheckoutComponent},
     {path: 'checkout-conf', component: CheckoutConfirmComponent}
 ];

@@ -40,6 +40,7 @@
 }
 *, ::after, ::before {
     box-sizing: border-box;
+    text-decoration: none;
 }
 .about{
     margin-left: 45px;
@@ -107,5 +108,5 @@ color: var(--TextOrange);
     margin-top: 3rem;
 }
 .rounded:hover{
-    scale: 1.1;
+    scale: 1.05;
 }

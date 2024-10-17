@@ -13,6 +13,22 @@ onload = function() {
     // user entries array
     let userArr = JSON.parse(localStorage.getItem("users") || "[]");
 
+    // Initialize Users
+    let user1 = {
+        name: "Ahmed Raiyah", 
+        email: "ahmed@gmail.com", 
+        password: "userPass123$$" 
+    };
+    let user2 = {
+        name: "Mohammed Ahmed", 
+        email: "mohamed@gmail.com", 
+        password: "userPass123$$"
+    };     
+    
+
+    userArr.push(user1);
+    userArr.push(user2);
+    localStorage.setItem("users", JSON.stringify(userArr));
 
     // to show and hide password input
     hideButtons.forEach((button, index) => {
